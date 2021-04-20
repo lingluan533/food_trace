@@ -1,0 +1,3971 @@
+{
+  "contractName": "Food",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "FoodIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "_FoodIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewFood",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "foodName",
+          "type": "string"
+        },
+        {
+          "name": "productDate",
+          "type": "string"
+        },
+        {
+          "name": "exp",
+          "type": "uint256"
+        },
+        {
+          "name": "manufacturer",
+          "type": "string"
+        },
+        {
+          "name": "advicePrice",
+          "type": "uint256"
+        },
+        {
+          "name": "serialNumber",
+          "type": "string"
+        },
+        {
+          "name": "condition",
+          "type": "uint256"
+        },
+        {
+          "name": "imgHash",
+          "type": "string"
+        }
+      ],
+      "name": "addFoodToStore",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_FoodId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFood",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.22+commit.4cb486ee\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"FoodIndex\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_FoodId\",\"type\":\"uint256\"}],\"name\":\"getFood\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint8\"},{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"foodName\",\"type\":\"string\"},{\"name\":\"productDate\",\"type\":\"string\"},{\"name\":\"exp\",\"type\":\"uint256\"},{\"name\":\"manufacturer\",\"type\":\"string\"},{\"name\":\"advicePrice\",\"type\":\"uint256\"},{\"name\":\"serialNumber\",\"type\":\"string\"},{\"name\":\"condition\",\"type\":\"uint256\"},{\"name\":\"imgHash\",\"type\":\"string\"}],\"name\":\"addFoodToStore\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getIndex\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_FoodIndex\",\"type\":\"uint256\"}],\"name\":\"NewFood\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/vue-login-manage-system-master/contracts/Food.sol\":\"Food\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/root/vue-login-manage-system-master/contracts/Food.sol\":{\"keccak256\":\"0x1d390acced16de9bd284bb4467734375e7aba1eba635fd5eaed88432e1893e99\",\"urls\":[\"bzzr://b44479d9a589e635404bc9fd7482944e61b1898626025acf7e05dbc0c26596ec\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008081905550610bb7806100276000396000f300608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063030e41d3146100675780631e4de8721461009257806362f724611461030b57806381045ead146104aa575b600080fd5b34801561007357600080fd5b5061007c6104d5565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100bd600480360381019080803590602001909291905050506104db565b60405180806020018060200189815260200180602001888152602001806020018760018111156100e957fe5b60ff1681526020018060200186810386528e818151815260200191508051906020019080838360005b8381101561012d578082015181840152602081019050610112565b50505050905090810190601f16801561015a5780820380516001836020036101000a031916815260200191505b5086810385528d818151815260200191508051906020019080838360005b83811015610193578082015181840152602081019050610178565b50505050905090810190601f1680156101c05780820380516001836020036101000a031916815260200191505b5086810384528b818151815260200191508051906020019080838360005b838110156101f95780820151818401526020810190506101de565b50505050905090810190601f1680156102265780820380516001836020036101000a031916815260200191505b50868103835289818151815260200191508051906020019080838360005b8381101561025f578082015181840152602081019050610244565b50505050905090810190601f16801561028c5780820380516001836020036101000a031916815260200191505b50868103825287818151815260200191508051906020019080838360005b838110156102c55780820151818401526020810190506102aa565b50505050905090810190601f1680156102f25780820380516001836020036101000a031916815260200191505b509d505050505050505050505050505060405180910390f35b34801561031757600080fd5b506104a8600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506108dd565b005b3480156104b657600080fd5b506104bf610a85565b6040518082815260200191505060405180910390f35b60005481565b6060806000606060006060600060606104f2610a8e565b600160008b8152602001908152602001600020610120604051908101604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105b55780601f1061058a576101008083540402835291602001916105b5565b820191906000526020600020905b81548152906001019060200180831161059857829003601f168201915b50505050508152602001600282018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106575780601f1061062c57610100808354040283529160200191610657565b820191906000526020600020905b81548152906001019060200180831161063a57829003601f168201915b5050505050815260200160038201548152602001600482018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107035780601f106106d857610100808354040283529160200191610703565b820191906000526020600020905b8154815290600101906020018083116106e657829003601f168201915b5050505050815260200160058201548152602001600682018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107af5780601f10610784576101008083540402835291602001916107af565b820191906000526020600020905b81548152906001019060200180831161079257829003601f168201915b505050505081526020016007820160009054906101000a900460ff1660018111156107d657fe5b60018111156107e157fe5b8152602001600882018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561087e5780601f106108535761010080835404028352916020019161087e565b820191906000526020600020905b81548152906001019060200180831161086157829003601f168201915b505050505081525050905080602001518160400151826060015183608001518460a001518560c001518660e001518761010001518797508696508494508292508090509850985098509850985098509850985050919395975091939597565b6108e5610a8e565b600160008082825401925050819055506101206040519081016040528060005481526020018a815260200189815260200188815260200187815260200186815260200185815260200184600181111561093a57fe5b600181111561094557fe5b815260200183815250905080600160008054815260200190815260200160002060008201518160000155602082015181600101908051906020019061098b929190610ae6565b5060408201518160020190805190602001906109a8929190610ae6565b506060820151816003015560808201518160040190805190602001906109cf929190610ae6565b5060a0820151816005015560c08201518160060190805190602001906109f6929190610ae6565b5060e08201518160070160006101000a81548160ff02191690836001811115610a1b57fe5b0217905550610100820151816008019080519060200190610a3d929190610ae6565b509050507f6342d3adc4485c9ce2ab9749091b291d6bf4d88dbe4663b0811b89cdd3bebf356000546040518082815260200191505060405180910390a1505050505050505050565b60008054905090565b610120604051908101604052806000815260200160608152602001606081526020016000815260200160608152602001600081526020016060815260200160006001811115610ad957fe5b8152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610b2757805160ff1916838001178555610b55565b82800160010185558215610b55579182015b82811115610b54578251825591602001919060010190610b39565b5b509050610b629190610b66565b5090565b610b8891905b80821115610b84576000816000905550600101610b6c565b5090565b905600a165627a7a72305820a4acf72217865ef52543146962cd0f46750a71741fbd30a62c179d51231c51960029",
+  "deployedBytecode": "0x608060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063030e41d3146100675780631e4de8721461009257806362f724611461030b57806381045ead146104aa575b600080fd5b34801561007357600080fd5b5061007c6104d5565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100bd600480360381019080803590602001909291905050506104db565b60405180806020018060200189815260200180602001888152602001806020018760018111156100e957fe5b60ff1681526020018060200186810386528e818151815260200191508051906020019080838360005b8381101561012d578082015181840152602081019050610112565b50505050905090810190601f16801561015a5780820380516001836020036101000a031916815260200191505b5086810385528d818151815260200191508051906020019080838360005b83811015610193578082015181840152602081019050610178565b50505050905090810190601f1680156101c05780820380516001836020036101000a031916815260200191505b5086810384528b818151815260200191508051906020019080838360005b838110156101f95780820151818401526020810190506101de565b50505050905090810190601f1680156102265780820380516001836020036101000a031916815260200191505b50868103835289818151815260200191508051906020019080838360005b8381101561025f578082015181840152602081019050610244565b50505050905090810190601f16801561028c5780820380516001836020036101000a031916815260200191505b50868103825287818151815260200191508051906020019080838360005b838110156102c55780820151818401526020810190506102aa565b50505050905090810190601f1680156102f25780820380516001836020036101000a031916815260200191505b509d505050505050505050505050505060405180910390f35b34801561031757600080fd5b506104a8600480360381019080803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919291929080359060200190929190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091929192905050506108dd565b005b3480156104b657600080fd5b506104bf610a85565b6040518082815260200191505060405180910390f35b60005481565b6060806000606060006060600060606104f2610a8e565b600160008b8152602001908152602001600020610120604051908101604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105b55780601f1061058a576101008083540402835291602001916105b5565b820191906000526020600020905b81548152906001019060200180831161059857829003601f168201915b50505050508152602001600282018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106575780601f1061062c57610100808354040283529160200191610657565b820191906000526020600020905b81548152906001019060200180831161063a57829003601f168201915b5050505050815260200160038201548152602001600482018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107035780601f106106d857610100808354040283529160200191610703565b820191906000526020600020905b8154815290600101906020018083116106e657829003601f168201915b5050505050815260200160058201548152602001600682018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107af5780601f10610784576101008083540402835291602001916107af565b820191906000526020600020905b81548152906001019060200180831161079257829003601f168201915b505050505081526020016007820160009054906101000a900460ff1660018111156107d657fe5b60018111156107e157fe5b8152602001600882018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561087e5780601f106108535761010080835404028352916020019161087e565b820191906000526020600020905b81548152906001019060200180831161086157829003601f168201915b505050505081525050905080602001518160400151826060015183608001518460a001518560c001518660e001518761010001518797508696508494508292508090509850985098509850985098509850985050919395975091939597565b6108e5610a8e565b600160008082825401925050819055506101206040519081016040528060005481526020018a815260200189815260200188815260200187815260200186815260200185815260200184600181111561093a57fe5b600181111561094557fe5b815260200183815250905080600160008054815260200190815260200160002060008201518160000155602082015181600101908051906020019061098b929190610ae6565b5060408201518160020190805190602001906109a8929190610ae6565b506060820151816003015560808201518160040190805190602001906109cf929190610ae6565b5060a0820151816005015560c08201518160060190805190602001906109f6929190610ae6565b5060e08201518160070160006101000a81548160ff02191690836001811115610a1b57fe5b0217905550610100820151816008019080519060200190610a3d929190610ae6565b509050507f6342d3adc4485c9ce2ab9749091b291d6bf4d88dbe4663b0811b89cdd3bebf356000546040518082815260200191505060405180910390a1505050505050505050565b60008054905090565b610120604051908101604052806000815260200160608152602001606081526020016000815260200160608152602001600081526020016060815260200160006001811115610ad957fe5b8152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610b2757805160ff1916838001178555610b55565b82800160010185558215610b55579182015b82811115610b54578251825591602001919060010190610b39565b5b509050610b629190610b66565b5090565b610b8891905b80821115610b84576000816000905550600101610b6c565b5090565b905600a165627a7a72305820a4acf72217865ef52543146962cd0f46750a71741fbd30a62c179d51231c51960029",
+  "sourceMap": "60:1597:0:-;;;529:50;8:9:-1;5:2;;;30:1;27;20:12;5:2;529:50:0;571:1;559:9;:13;;;;60:1597;;;;;;",
+  "deployedSourceMap": "60:1597:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;126:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;126:21:0;;;;;;;;;;;;;;;;;;;;;;;1113:330;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1113:330:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;674:434;;8:9:-1;5:2;;;30:1;27;20:12;5:2;674:434:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;589:80;;8:9:-1;5:2;;;30:1;27;20:12;5:2;589:80:0;;;;;;;;;;;;;;;;;;;;;;;126:21;;;;:::o;1113:330::-;1165:6;1173;1181:4;1187:6;1195:4;1201:6;1210:13;1224:6;1241:16;;:::i;:::-;1260:6;:15;1267:7;1260:15;;;;;;;;;;;1241:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1293:4;:13;;;1308:4;:16;;;1326:4;:8;;;1336:4;:17;;;1355:4;:16;;;1385:4;:17;;;1404:4;:14;;;1419:4;:12;;;1285:147;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1113:330;;;;;;;;;;:::o;674:434::-;883:16;;:::i;:::-;872:1;861:9;;:12;;;;;;;;;;;902:130;;;;;;;;;907:9;;902:130;;;;918:8;902:130;;;;928:11;902:130;;;;941:3;902:130;;;;946:12;902:130;;;;973:11;902:130;;;;985:12;902:130;;;;1013:9;999:24;;;;;;;;902:130;;;;;;;;;;;;1024:7;902:130;;;883:149;;1062:4;1042:6;:17;1049:9;;1042:17;;;;;;;;;;;:24;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;1083:18;1091:9;;1083:18;;;;;;;;;;;;;;;;;;674:434;;;;;;;;;:::o;589:80::-;629:4;652:9;;645:17;;589:80;:::o;60:1597::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.4.17;\n\n\n\ncontract Food{\n   \n    enum FoodCondition { Normal, Recall }\n\n    uint public FoodIndex;\n    \n    mapping (uint => Food) stores;\n   \n  \n    struct Food{\n        uint id;\n        string foodName;//食品名\n        string productDate; //\n        uint exp; \n        string manufacturer;\n        uint advicePrice;   \n        string serialNumber;\n        FoodCondition condition; //狀態\n        string imgHash;\n       \n    } \n\n   \n    event NewFood(uint _FoodIndex);\n    constructor() public{\n        FoodIndex = 0;\n    }\n    \n    function getIndex() public view returns(uint ){\n        return(FoodIndex);\n    }\n    function addFoodToStore(string foodName, string productDate, uint exp, string manufacturer\n        , uint advicePrice, string serialNumber,uint condition ,string imgHash) public {\n       FoodIndex+=1;\n        Food memory food = Food(FoodIndex, foodName, productDate, exp, manufacturer\n            , advicePrice,serialNumber, FoodCondition(condition),imgHash);\n        stores[FoodIndex] = food;  \n        emit NewFood(FoodIndex);\n    }\n    function getFood(uint _FoodId) public view returns (string, string, uint, string, uint, string,  FoodCondition,string){\n        Food memory food = stores[_FoodId];\n        return (food.foodName, food.productDate, food.exp, food.manufacturer, food.advicePrice\n            ,food.serialNumber, food.condition,food.imgHash);    \n    }\n    // function updatePosition(uint _FoodId,string _newPosition) public returns(bool){\n    //      Food storage Food = stores[_FoodId];\n    //     Food.position = _newPosition;\n    //     return true;\n    // }\n\n\n}",
+  "sourcePath": "/root/vue-login-manage-system-master/contracts/Food.sol",
+  "ast": {
+    "absolutePath": "/root/vue-login-manage-system-master/contracts/Food.sol",
+    "exportedSymbols": {
+      "Food": [
+        147
+      ]
+    },
+    "id": 148,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147
+        ],
+        "name": "Food",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Food.FoodCondition",
+            "id": 4,
+            "members": [
+              {
+                "id": 2,
+                "name": "Normal",
+                "nodeType": "EnumValue",
+                "src": "104:6:0"
+              },
+              {
+                "id": 3,
+                "name": "Recall",
+                "nodeType": "EnumValue",
+                "src": "112:6:0"
+              }
+            ],
+            "name": "FoodCondition",
+            "nodeType": "EnumDefinition",
+            "src": "83:37:0"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "FoodIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "126:21:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "126:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 10,
+            "name": "stores",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "158:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+              "typeString": "mapping(uint256 => struct Food.Food)"
+            },
+            "typeName": {
+              "id": 9,
+              "keyType": {
+                "id": 7,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "167:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "158:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                "typeString": "mapping(uint256 => struct Food.Food)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 8,
+                "name": "Food",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 29,
+                "src": "175:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                  "typeString": "struct Food.Food"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "Food.Food",
+            "id": 29,
+            "members": [
+              {
+                "constant": false,
+                "id": 12,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "221:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "foodName",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "238:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "238:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "productDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "274:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "274:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "exp",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "305:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "305:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "manufacturer",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "324:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 22,
+                "name": "advicePrice",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "353:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 21,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "353:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24,
+                "name": "serialNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "382:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 23,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "382:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26,
+                "name": "condition",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "411:23:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_FoodCondition_$4",
+                  "typeString": "enum Food.FoodCondition"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 25,
+                  "name": "FoodCondition",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 4,
+                  "src": "411:13:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FoodCondition_$4",
+                    "typeString": "enum Food.FoodCondition"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28,
+                "name": "imgHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "453:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 27,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "453:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Food",
+            "nodeType": "StructDefinition",
+            "scope": 147,
+            "src": "200:282:0",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 33,
+            "name": "NewFood",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31,
+                  "indexed": false,
+                  "name": "_FoodIndex",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33,
+                  "src": "507:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "506:17:0"
+            },
+            "src": "493:31:0"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "549:30:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 36,
+                      "name": "FoodIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "559:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "571:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "559:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "559:13:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "540:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "549:0:0"
+            },
+            "scope": 147,
+            "src": "529:50:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "635:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "652:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 47,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "651:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 45,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "645:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getIndex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "606:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "629:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "629:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "628:7:0"
+            },
+            "scope": 147,
+            "src": "589:80:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 99,
+              "nodeType": "Block",
+              "src": "852:256:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 69,
+                      "name": "FoodIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "861:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "872:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "861:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 72,
+                  "nodeType": "ExpressionStatement",
+                  "src": "861:12:0"
+                },
+                {
+                  "assignments": [
+                    74
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 74,
+                      "name": "food",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 100,
+                      "src": "883:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 73,
+                        "name": "Food",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 29,
+                        "src": "883:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                          "typeString": "struct Food.Food"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 88,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "907:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "foodName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "918:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 78,
+                        "name": "productDate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 54,
+                        "src": "928:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "exp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 56,
+                        "src": "941:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 80,
+                        "name": "manufacturer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "946:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 81,
+                        "name": "advicePrice",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "973:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "serialNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "985:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 84,
+                            "name": "condition",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 64,
+                            "src": "1013:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 83,
+                          "name": "FoodCondition",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "999:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_FoodCondition_$4_$",
+                            "typeString": "type(enum Food.FoodCondition)"
+                          }
+                        },
+                        "id": 85,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "999:24:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 86,
+                        "name": "imgHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "1024:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 75,
+                      "name": "Food",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29,
+                      "src": "902:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Food_$29_storage_ptr_$",
+                        "typeString": "type(struct Food.Food storage pointer)"
+                      }
+                    },
+                    "id": 87,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "902:130:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_memory",
+                      "typeString": "struct Food.Food memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "883:149:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 93,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "stores",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "1042:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                          "typeString": "mapping(uint256 => struct Food.Food storage ref)"
+                        }
+                      },
+                      "id": 91,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 90,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "1049:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1042:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_storage",
+                        "typeString": "struct Food.Food storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 92,
+                      "name": "food",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 74,
+                      "src": "1062:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food memory"
+                      }
+                    },
+                    "src": "1042:24:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_storage",
+                      "typeString": "struct Food.Food storage ref"
+                    }
+                  },
+                  "id": 94,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1042:24:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 96,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "1091:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 95,
+                      "name": "NewFood",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33,
+                      "src": "1083:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1083:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 98,
+                  "nodeType": "EmitStatement",
+                  "src": "1078:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 100,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addFoodToStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "foodName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "698:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "698:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "productDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "715:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 56,
+                  "name": "exp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "735:8:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 55,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "manufacturer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "745:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "745:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "advicePrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "775:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "775:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "serialNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "793:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "793:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "condition",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "813:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "813:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "imgHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "829:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "829:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "697:147:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "852:0:0"
+            },
+            "scope": 147,
+            "src": "674:434:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 145,
+              "nodeType": "Block",
+              "src": "1231:212:0",
+              "statements": [
+                {
+                  "assignments": [
+                    122
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 122,
+                      "name": "food",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 146,
+                      "src": "1241:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 121,
+                        "name": "Food",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 29,
+                        "src": "1241:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                          "typeString": "struct Food.Food"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 126,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 123,
+                      "name": "stores",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "1260:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                        "typeString": "mapping(uint256 => struct Food.Food storage ref)"
+                      }
+                    },
+                    "id": 125,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 124,
+                      "name": "_FoodId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 102,
+                      "src": "1267:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1260:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_storage",
+                      "typeString": "struct Food.Food storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1241:34:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 127,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1293:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 128,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "foodName",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "1293:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 129,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1308:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 130,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "productDate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 16,
+                        "src": "1308:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 131,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1326:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 132,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "exp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 18,
+                        "src": "1326:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 133,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1336:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 134,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "manufacturer",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 20,
+                        "src": "1336:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 135,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1355:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 136,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "advicePrice",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 22,
+                        "src": "1355:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 137,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1385:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 138,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "serialNumber",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 24,
+                        "src": "1385:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 139,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1404:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 140,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "condition",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26,
+                        "src": "1404:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 141,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1419:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 142,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "imgHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 28,
+                        "src": "1419:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "id": 143,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1292:140:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_string_memory_$_t_uint256_$_t_string_memory_$_t_uint256_$_t_string_memory_$_t_enum$_FoodCondition_$4_$_t_string_memory_$",
+                      "typeString": "tuple(string memory,string memory,uint256,string memory,uint256,string memory,enum Food.FoodCondition,string memory)"
+                    }
+                  },
+                  "functionReturnParameters": 120,
+                  "id": 144,
+                  "nodeType": "Return",
+                  "src": "1285:147:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 146,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getFood",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 102,
+                  "name": "_FoodId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1130:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1130:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1129:14:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 105,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1165:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 104,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1165:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1173:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1173:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1181:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 108,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1181:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 111,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1187:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 110,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1187:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1195:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1195:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 115,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1201:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1201:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 117,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1210:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FoodCondition_$4",
+                    "typeString": "enum Food.FoodCondition"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 116,
+                    "name": "FoodCondition",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4,
+                    "src": "1210:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FoodCondition_$4",
+                      "typeString": "enum Food.FoodCondition"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 119,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1224:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1224:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1164:67:0"
+            },
+            "scope": 147,
+            "src": "1113:330:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "60:1597:0"
+      }
+    ],
+    "src": "32:1625:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/vue-login-manage-system-master/contracts/Food.sol",
+    "exportedSymbols": {
+      "Food": [
+        147
+      ]
+    },
+    "id": 148,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".17"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147
+        ],
+        "name": "Food",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Food.FoodCondition",
+            "id": 4,
+            "members": [
+              {
+                "id": 2,
+                "name": "Normal",
+                "nodeType": "EnumValue",
+                "src": "104:6:0"
+              },
+              {
+                "id": 3,
+                "name": "Recall",
+                "nodeType": "EnumValue",
+                "src": "112:6:0"
+              }
+            ],
+            "name": "FoodCondition",
+            "nodeType": "EnumDefinition",
+            "src": "83:37:0"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "FoodIndex",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "126:21:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 5,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "126:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 10,
+            "name": "stores",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "158:29:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+              "typeString": "mapping(uint256 => struct Food.Food)"
+            },
+            "typeName": {
+              "id": 9,
+              "keyType": {
+                "id": 7,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "167:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "158:22:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                "typeString": "mapping(uint256 => struct Food.Food)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 8,
+                "name": "Food",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 29,
+                "src": "175:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                  "typeString": "struct Food.Food"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "Food.Food",
+            "id": 29,
+            "members": [
+              {
+                "constant": false,
+                "id": 12,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "221:7:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "foodName",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "238:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "238:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "productDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "274:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "274:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "exp",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "305:8:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "305:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "manufacturer",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "324:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "324:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 22,
+                "name": "advicePrice",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "353:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 21,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "353:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 24,
+                "name": "serialNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "382:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 23,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "382:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 26,
+                "name": "condition",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "411:23:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_FoodCondition_$4",
+                  "typeString": "enum Food.FoodCondition"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 25,
+                  "name": "FoodCondition",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 4,
+                  "src": "411:13:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FoodCondition_$4",
+                    "typeString": "enum Food.FoodCondition"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 28,
+                "name": "imgHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 29,
+                "src": "453:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 27,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "453:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Food",
+            "nodeType": "StructDefinition",
+            "scope": 147,
+            "src": "200:282:0",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 33,
+            "name": "NewFood",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 32,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31,
+                  "indexed": false,
+                  "name": "_FoodIndex",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33,
+                  "src": "507:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "506:17:0"
+            },
+            "src": "493:31:0"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "549:30:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 36,
+                      "name": "FoodIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "559:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 37,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "571:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "559:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "559:13:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 41,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "540:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 35,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "549:0:0"
+            },
+            "scope": 147,
+            "src": "529:50:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "635:34:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "652:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 47,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "651:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 45,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "645:17:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getIndex",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 42,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "606:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "629:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "629:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "628:7:0"
+            },
+            "scope": 147,
+            "src": "589:80:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 99,
+              "nodeType": "Block",
+              "src": "852:256:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 69,
+                      "name": "FoodIndex",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "861:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "872:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "861:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 72,
+                  "nodeType": "ExpressionStatement",
+                  "src": "861:12:0"
+                },
+                {
+                  "assignments": [
+                    74
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 74,
+                      "name": "food",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 100,
+                      "src": "883:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 73,
+                        "name": "Food",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 29,
+                        "src": "883:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                          "typeString": "struct Food.Food"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 88,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "907:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 77,
+                        "name": "foodName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "918:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 78,
+                        "name": "productDate",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 54,
+                        "src": "928:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "exp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 56,
+                        "src": "941:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 80,
+                        "name": "manufacturer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "946:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 81,
+                        "name": "advicePrice",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "973:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "serialNumber",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "985:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 84,
+                            "name": "condition",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 64,
+                            "src": "1013:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 83,
+                          "name": "FoodCondition",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4,
+                          "src": "999:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_FoodCondition_$4_$",
+                            "typeString": "type(enum Food.FoodCondition)"
+                          }
+                        },
+                        "id": 85,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "999:24:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 86,
+                        "name": "imgHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "1024:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 75,
+                      "name": "Food",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29,
+                      "src": "902:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Food_$29_storage_ptr_$",
+                        "typeString": "type(struct Food.Food storage pointer)"
+                      }
+                    },
+                    "id": 87,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "902:130:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_memory",
+                      "typeString": "struct Food.Food memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "883:149:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 93,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "stores",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "1042:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                          "typeString": "mapping(uint256 => struct Food.Food storage ref)"
+                        }
+                      },
+                      "id": 91,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 90,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "1049:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1042:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_storage",
+                        "typeString": "struct Food.Food storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 92,
+                      "name": "food",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 74,
+                      "src": "1062:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food memory"
+                      }
+                    },
+                    "src": "1042:24:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_storage",
+                      "typeString": "struct Food.Food storage ref"
+                    }
+                  },
+                  "id": 94,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1042:24:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 96,
+                        "name": "FoodIndex",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "1091:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 95,
+                      "name": "NewFood",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 33,
+                      "src": "1083:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 97,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1083:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 98,
+                  "nodeType": "EmitStatement",
+                  "src": "1078:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 100,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addFoodToStore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "foodName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "698:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "698:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "productDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "715:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "715:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 56,
+                  "name": "exp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "735:8:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 55,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "735:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "manufacturer",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "745:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "745:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "advicePrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "775:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "775:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "serialNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "793:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "793:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "condition",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "813:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "813:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "imgHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 100,
+                  "src": "829:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "829:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "697:147:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "852:0:0"
+            },
+            "scope": 147,
+            "src": "674:434:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 145,
+              "nodeType": "Block",
+              "src": "1231:212:0",
+              "statements": [
+                {
+                  "assignments": [
+                    122
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 122,
+                      "name": "food",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 146,
+                      "src": "1241:16:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                        "typeString": "struct Food.Food"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 121,
+                        "name": "Food",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 29,
+                        "src": "1241:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Food_$29_storage_ptr",
+                          "typeString": "struct Food.Food"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 126,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 123,
+                      "name": "stores",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10,
+                      "src": "1260:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Food_$29_storage_$",
+                        "typeString": "mapping(uint256 => struct Food.Food storage ref)"
+                      }
+                    },
+                    "id": 125,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 124,
+                      "name": "_FoodId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 102,
+                      "src": "1267:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1260:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Food_$29_storage",
+                      "typeString": "struct Food.Food storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1241:34:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 127,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1293:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 128,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "foodName",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "1293:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 129,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1308:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 130,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "productDate",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 16,
+                        "src": "1308:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 131,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1326:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 132,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "exp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 18,
+                        "src": "1326:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 133,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1336:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 134,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "manufacturer",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 20,
+                        "src": "1336:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 135,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1355:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 136,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "advicePrice",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 22,
+                        "src": "1355:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 137,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1385:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 138,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "serialNumber",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 24,
+                        "src": "1385:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 139,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1404:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 140,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "condition",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 26,
+                        "src": "1404:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_FoodCondition_$4",
+                          "typeString": "enum Food.FoodCondition"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 141,
+                          "name": "food",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 122,
+                          "src": "1419:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Food_$29_memory_ptr",
+                            "typeString": "struct Food.Food memory"
+                          }
+                        },
+                        "id": 142,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "imgHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 28,
+                        "src": "1419:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "id": 143,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1292:140:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_string_memory_$_t_uint256_$_t_string_memory_$_t_uint256_$_t_string_memory_$_t_enum$_FoodCondition_$4_$_t_string_memory_$",
+                      "typeString": "tuple(string memory,string memory,uint256,string memory,uint256,string memory,enum Food.FoodCondition,string memory)"
+                    }
+                  },
+                  "functionReturnParameters": 120,
+                  "id": 144,
+                  "nodeType": "Return",
+                  "src": "1285:147:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 146,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getFood",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 102,
+                  "name": "_FoodId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1130:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 101,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1130:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1129:14:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 105,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1165:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 104,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1165:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1173:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 106,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1173:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 109,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1181:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 108,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1181:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 111,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1187:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 110,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1187:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1195:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1195:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 115,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1201:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 114,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1201:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 117,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1210:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FoodCondition_$4",
+                    "typeString": "enum Food.FoodCondition"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 116,
+                    "name": "FoodCondition",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 4,
+                    "src": "1210:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FoodCondition_$4",
+                      "typeString": "enum Food.FoodCondition"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 119,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 146,
+                  "src": "1224:6:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 118,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1224:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1164:67:0"
+            },
+            "scope": 147,
+            "src": "1113:330:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "60:1597:0"
+      }
+    ],
+    "src": "32:1625:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.22+commit.4cb486ee.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {
+        "0x6342d3adc4485c9ce2ab9749091b291d6bf4d88dbe4663b0811b89cdd3bebf35": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "_FoodIndex",
+              "type": "uint256"
+            }
+          ],
+          "name": "NewFood",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xD2aaf877EBE2939668189D12adEf9d8ec01F9D54",
+      "transactionHash": "0x4886e15549980cf8d289aed900157e821ff575fe1600f4de22b6d5ad1994da2d"
+    }
+  },
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2021-04-20T03:13:47.303Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
